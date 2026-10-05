@@ -1,0 +1,5 @@
+reporting_period,complaints_closed,closed_within_3_days_pct,closed_over_3_days_within_8_weeks_pct,closed_over_8_weeks_pct,complaints_upheld,upheld_pct,total_redress_gbp,redress_upheld_gbp,redress_not_upheld_gbp,average_redress_upheld_gbp
+2024_H1,1868099,43.36,49.70,6.94,1059574,56.72,243179589,213317072,29862517,201
+2024_H2,1783402,44.67,50.04,5.29,1009922,56.63,235865837,208890808,26975029,207
+2025_H1,1823806,45.35,48.77,5.88,1055689,57.88,283651863,251651462,32000401,238
+2025_H2,1720632,44.77,49.67,5.56,955698,55.54,235790584,205716292,30074292,215

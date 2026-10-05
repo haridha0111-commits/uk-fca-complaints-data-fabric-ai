@@ -1,0 +1,28 @@
+-- Source table contracts for the real FCA aggregates in ../data/.
+-- Names below are logical Iceberg table names. Validate schema at ingestion.
+--
+-- raw.fca_product_complaints
+--   product VARCHAR NOT NULL
+--   product_group VARCHAR NOT NULL
+--   2024_H1, 2024_H2, 2025_H1, 2025_H2 BIGINT NOT NULL
+--   Grain: one source product category; values = complaints opened.
+--
+-- raw.fca_product_complaints_context
+--   product VARCHAR NOT NULL
+--   product_group VARCHAR NOT NULL
+--   2024_H1, 2024_H2, 2025_H1, 2025_H2 DOUBLE nullable
+--   Grain: one product category; source contextualised volume per 1,000
+--   relevant policies/balances/accounts/agreements. Source blanks remain NULL.
+--
+-- raw.fca_market_complaints_summary
+--   reporting_period VARCHAR NOT NULL
+--   complaints_closed BIGINT NOT NULL
+--   timing percentages DOUBLE NOT NULL (source percentage points, 0-100)
+--   complaints_upheld BIGINT NOT NULL
+--   upheld_pct DOUBLE NOT NULL (source percentage points, 0-100)
+--   redress fields BIGINT GBP; average_redress_upheld_gbp BIGINT GBP.
+--   Grain: one market-level reporting period.
+--
+-- Record source URL, retrieval/extraction date, FCA release/update date,
+-- licence, source version/hash and transformation version as table metadata.
+
